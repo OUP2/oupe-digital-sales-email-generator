@@ -1,3 +1,5 @@
-module.exports = testESMInReact = () => {
-  return "Hello World";
+module.exports = {
+  testESMInReact: () => {
+    return "Hello World";
+  },
 };
