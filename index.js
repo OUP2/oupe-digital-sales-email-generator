@@ -4,7 +4,7 @@ const {
   generateEmailWithLicenses,
 } = require("./src/generateEmails");
 
-const generationSettings = (
+exports.generationSettings = (
   receivesInvoice,
   receivesLicenses,
   platformType,
@@ -28,7 +28,3 @@ const generationSettings = (
 
   return email;
 };
-
-// Possible values ["blinkUses", "blinkIndividual", "blinkAcademy", "marsupial", "OLB", "onlinePractice", "OOSP", "ORC"]
-
-console.log(generationSettings(true, false, [], false));
