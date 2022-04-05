@@ -1,30 +1,12 @@
-const {
-  generateEmailOnlyInvoice,
-  generateEmailReturn,
-  generateEmailWithLicenses,
-} = require("./src/generateEmails");
+const express = require("express");
 
-exports.generationSettings = (
-  receivesInvoice,
-  receivesLicenses,
-  platformType,
-  isReturn
-) => {
-  let email;
+const app = express();
+const port = 8001;
 
-  if (isReturn) {
-    email = generateEmailReturn();
-    return email;
-  }
+app.get("/", (req, res) => {
+  res.send("Hello Frontend!");
+});
 
-  if (receivesInvoice && !receivesLicenses) {
-    email = generateEmailOnlyInvoice();
-    return email;
-  }
-
-  if (receivesLicenses) {
-    email = generateEmailWithLicenses(receivesInvoice, platformType);
-  }
-
-  return email;
-};
+app.listen(port, () => {
+  console.log(`POC app listening on port ${port}`);
+});
