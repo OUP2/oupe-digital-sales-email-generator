@@ -1,6 +1,6 @@
 {
   "name": "oupe-digital-sales-email-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Code that will act as a package for the frontend and the OAF tests and generate the html code that should be received in the email notifications sent by the Digital Sales platform.",
   "main": "index.js",
   "author": "Carlos Bermejo Pérez <carlos.bermejo@oup.com>",
