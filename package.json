@@ -6,7 +6,7 @@
   "author": "Carlos Bermejo Pérez <carlos.bermejo@oup.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./index.js",
     "start:dev": "nodemon yarn start"
   },
   "engines": {
