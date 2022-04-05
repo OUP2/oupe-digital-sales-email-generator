@@ -9,6 +9,9 @@
     "start": "node index.js",
     "start:dev": "nodemon yarn start"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "fs-extra": "^10.0.1"
   },

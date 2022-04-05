@@ -1,10 +1,11 @@
 const express = require("express");
 
 const app = express();
-const port = 8001;
+const port =
+  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 8001;
 
 app.get("/", (req, res) => {
-  res.send("Hello Frontend!");
+  res.send("Hello Frontend! " + process.env.NODE_ENV);
 });
 
 app.listen(port, () => {
