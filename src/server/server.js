@@ -1,0 +1,22 @@
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+const port =
+  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 8001;
+
+const whitelist = ["http://localhost:3000", "https://carlosbermejo-oup.github.io"];
+
+exports.startServer = () => {
+  app.use(cors({ origin: whitelist }));
+  app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
+
+  app.listen(port, () => {
+    console.log(`POC app listening on port ${port}`);
+  });
+
+  app.get("/", (req, res) => {
+    res.send("Hello Frontend! " + process.env.NODE_ENV);
+  });
+};
